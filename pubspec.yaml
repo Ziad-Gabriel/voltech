@@ -1,0 +1,93 @@
+name: voltech
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  dio: ^5.11.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/geist/
+
+  fonts:
+    - family: BarlowCondensed
+      fonts:
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-Black.ttf
+          weight: 900
+        - asset: assets/fonts/barlow_condensed/BarlowCondensed-BlackItalic.ttf
+          weight: 900
+          style: italic
+
+    - family: Geist
+      fonts:
+        - asset: assets/fonts/geist/Geist-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/geist/Geist-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/geist/Geist-Light.ttf
+          weight: 300
+        - asset: assets/fonts/geist/Geist-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/geist/Geist-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/geist/Geist-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/geist/Geist-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/geist/Geist-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/geist/Geist-Black.ttf
+          weight: 900
