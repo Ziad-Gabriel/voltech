@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voltech/core/constants/layout/borders.dart';
-import 'package:voltech/core/constants/layout/elevation.dart';
-import 'package:voltech/core/constants/layout/padding.dart';
+import 'package:voltech/shared/main_container/main_container.dart';
 
 class ProductsCartList extends StatelessWidget {
   const ProductsCartList({super.key});
@@ -9,19 +8,13 @@ class ProductsCartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      physics: BouncingScrollPhysics(),
       children: [
         Column(
           children: List.generate(
             7,
-            (index) => Container(
+            (index) => MainContainer(
               height: 120,
-              margin: EdgeInsets.only(bottom: 8),
-              padding: AppPadding.mainAll,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: Borders.mainRadius,
-                boxShadow: [customElevation(context)],
-              ),
               child: Row(
                 spacing: 8,
                 children: [
@@ -106,7 +99,7 @@ class ProductsCartList extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 245),
+        SizedBox(height: 260),
       ],
     );
   }

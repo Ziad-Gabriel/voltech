@@ -26,7 +26,7 @@ class Checkout extends StatelessWidget {
           padding: AppPadding.mainAll,
           decoration: BoxDecoration(
             color: Colors.white.withAlpha(2),
-            borderRadius: Borders.mainRadius,
+            borderRadius: Borders.navBarRadius,
             boxShadow: [
               BoxShadow(
                 color: Theme.of(context).colorScheme.shadow.withAlpha(86),
@@ -34,6 +34,11 @@ class Checkout extends StatelessWidget {
                 offset: const Offset(0, 4),
               ),
             ],
+
+            border: Border.all(
+              color: Theme.of(context).colorScheme.secondary.withAlpha(40),
+              width: 1.5,
+            ),
           ),
           child: Column(
             spacing: 4,

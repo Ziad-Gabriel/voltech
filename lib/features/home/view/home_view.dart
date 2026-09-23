@@ -17,16 +17,13 @@ class _HomeViewState extends State<HomeView> {
       onTap: FocusScope.of(context).unfocus,
       child: SizedBox(
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             TopBanner(),
             SizedBox(height: 10),
             Categories(),
             SizedBox(height: 10),
-            HorizontalList(title: 'Smart Phones'),
-            SizedBox(height: 10),
-            HorizontalList(title: 'Laptops'),
-            SizedBox(height: 10),
-            HorizontalList(title: 'Tablets'),
+            HorizontalList(),
           ],
         ),
       ),

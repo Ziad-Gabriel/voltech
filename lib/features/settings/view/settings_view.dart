@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:voltech/core/constants/layout/borders.dart';
-import 'package:voltech/core/constants/layout/elevation.dart';
 import 'package:voltech/core/constants/layout/padding.dart';
 import 'package:voltech/features/settings/widgets/account_orders.dart';
 import 'package:voltech/features/settings/widgets/language_toggle.dart';
+import 'package:voltech/features/settings/widgets/logout_button.dart';
 import 'package:voltech/features/settings/widgets/profile_container.dart';
 import 'package:voltech/features/settings/widgets/theme_toggle.dart';
+import 'package:voltech/shared/main_container/main_container.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
@@ -17,19 +17,14 @@ class SettingsView extends StatelessWidget {
       child: Padding(
         padding: AppPadding.mainHorizontal,
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             SizedBox(height: 12),
             ProfileContainer(),
             SizedBox(height: 12),
             Text('Preferences', style: Theme.of(context).textTheme.bodyLarge),
             SizedBox(height: 4),
-            Container(
-              padding: AppPadding.mainAll,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: Borders.mainRadius,
-                boxShadow: [customElevation(context)],
-              ),
+            MainContainer(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,15 +44,9 @@ class SettingsView extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             SizedBox(height: 4),
-            Container(
-              padding: AppPadding.mainAll,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: Borders.mainRadius,
-                boxShadow: [customElevation(context)],
-              ),
-              child: AccountOrders(),
-            ),
+            MainContainer(child: AccountOrders()),
+            SizedBox(height: 12),
+            LogoutButton(),
             SizedBox(height: 12),
           ],
         ),

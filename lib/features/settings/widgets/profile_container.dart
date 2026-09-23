@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:voltech/core/constants/layout/borders.dart';
-import 'package:voltech/core/constants/layout/elevation.dart';
-import 'package:voltech/core/constants/layout/padding.dart';
+import 'package:voltech/shared/main_container/main_container.dart';
 
 class ProfileContainer extends StatelessWidget {
   const ProfileContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return MainContainer(
       height: 130,
-      padding: AppPadding.mainAll,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        borderRadius: Borders.mainRadius,
-        boxShadow: [customElevation(context)],
-      ),
       child: Row(
         spacing: 6,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -23,11 +15,11 @@ class ProfileContainer extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 55,
-            backgroundColor: Theme.of(context).colorScheme.surface,
+            backgroundColor: Theme.of(context).colorScheme.primary,
             child: Center(
               child: Icon(
                 Icons.person,
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.primaryContainer,
                 size: 50,
               ),
             ),
@@ -48,7 +40,7 @@ class ProfileContainer extends StatelessWidget {
               ],
             ),
           ),
-          Icon(Icons.edit_outlined),
+          IconButton(onPressed: () {}, icon: Icon(Icons.edit_outlined)),
         ],
       ),
     );
